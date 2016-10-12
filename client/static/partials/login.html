@@ -1,0 +1,19 @@
+<form name="regField" ng-submit="create(user, regField.$valid)" novalidate>
+    <fieldset>
+        <legend>Register</legend>
+        <label>Username<input type="text" ng-model="user.username" required></label>
+        <label>PW<input type="password" ng-model="user.password" required></label>
+        <label>PW confirm<input type="password" ng-model="user.pw_confirm" required></label>
+        <button>Submit</button>
+    </fieldset>
+</form>
+<p ng-if="regErr">{{regErr}}</p>
+<form name="loginField" ng-submit="login(loginUser, loginField.$valid)" novalidate>
+    <fieldset>
+        <legend>Login</legend>
+        <label>Username<input type="text" ng-model="loginUser.username" required></label>
+        <label>PW<input type="password" ng-model="loginUser.password" required></label>
+        <button>Submit</button>
+    </fieldset>
+</form>
+<p ng-if="loginErr">{{loginErr}}</p>

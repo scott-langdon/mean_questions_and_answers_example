@@ -1,0 +1,18 @@
+<a href="" ng-click="logout()"<p ng-if="qErr">{{qErr}}</p>>Logout</a><br>
+<a href="#/dashboard">Home</a>
+<a href="#/question/{{question._id}}"">Go Back to Question</a>
+
+<h1>{{question.question}}</h1>
+<h1>{{question.description}}</h1>
+
+<form name="aField" ng-submit ="createAnswer(answer, aField.$valid)" novalidate>
+	<label>Your Answer:
+		<textarea rows="8" cols="40" ng-model="answer.answer" ng-minlength="5" required></textarea>
+	</label>
+	<label>Supporting details for your answer (optional)
+		<textarea rows="8" cols="40" ng-model="answer.description"></textarea>
+	</label>
+	<button ng-click="">Cancel</button>
+	<button ng-click="">Submit</button>
+</form>
+<p ng-if="aErr">{{aErr}}</p>
